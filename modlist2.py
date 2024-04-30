@@ -29,11 +29,6 @@ def checkFileExists(target_file):
 # ini読み込み configparserクラスを使用
 ini = configparser.ConfigParser()
 ini_path = './modlist2.ini'
-
-# if not os.path.exists(ini_path):
-    # raise ← Exceptionを発生
-    # raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), ini_path)
-
 ini.read(ini_path, 'UTF-8')
 
 reference_profile = ini.get('general', 'reference_profile') # ソートの元となるプロファイル名
